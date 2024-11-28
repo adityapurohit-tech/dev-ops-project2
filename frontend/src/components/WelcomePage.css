@@ -1,0 +1,18 @@
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('../assets/welcome-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: rgb(254, 254, 254);
+  font-size: 24px;
+}
+
+.welcome-box {
+  background: rgba(11, 3, 3, 0.6); /* Transparent black background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}

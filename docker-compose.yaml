@@ -1,0 +1,26 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: .    # This tells Docker to use the current directory (my-devops-project2)
+      dockerfile: Dockerfile   # This is the name of your Dockerfile
+    ports:
+      - "8082:80"
+
+  backend:
+    build:
+      context: .    # This tells Docker to use the current directory (my-devops-project2)
+      dockerfile: Dockerfile   # This is the name of your Dockerfile
+    ports:
+      - "3004:3004"
+
+  database:
+    image: mongo
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
